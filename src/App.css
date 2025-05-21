@@ -19,23 +19,3 @@ body {
 h1 {
   color: #c0392b;
 }
-
-.upload-box {
-  margin-top: 30px;
-  border: 2px dashed #c0392b;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.upload-box input {
-  margin: 10px;
-}
-
-.upload-box button {
-  background-color: #c0392b;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}

@@ -58,8 +58,7 @@ function ResumeUpload({ selectedJob }) {
       const response = await axios.post('http://localhost:3001/api/upload', formData);
       console.log('Upload response:', response);
        if (response.data.redirectUrl) {
-        const responseData = await axios.post(response.data.redirectUrl);
-        console.log('Response ms call:', responseData);
+        window.location.href = response.data.redirectUrl;
       }
       setMessage('Resume submitted successfully! Thank you for applying.');
       setFile(null);
