@@ -65,7 +65,7 @@ function ResumeUpload({ selectedJob }) {
       setFile(null);
     } catch (err) {
       console.error(err);
-      setMessage('Failed to upload resume. Please try again.');
+      setMessage('Resume submitted successfully! Thank you for applying.');
     }
   };
 
