@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import JobList from './components/JobList/JobList';
+import ResumeUpload from './components/ResumeUpload/ResumeUpload';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 import './App.css';
 
 function App() {
+  const [selectedJob, setSelectedJob] = useState(null);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <Header />
+      <main className="main-content">
+        <JobList onJobClick={setSelectedJob} />
+        {selectedJob && (
+          <ResumeUpload selectedJob={selectedJob} />
+        )}
+      </main>
+      <Footer />
     </div>
   );
 }
